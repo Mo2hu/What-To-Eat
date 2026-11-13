@@ -1,0 +1,16 @@
+[package]
+name = "wte"
+version = "0.1.0"
+edition = "2021"
+description = "今天吃什么 —— 离线外卖主食选择器"
+license = "MIT"
+
+[dependencies]
+eframe = { version = "0.32.3", default-features = false, features = ["glow", "default_fonts"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
